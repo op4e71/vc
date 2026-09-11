@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AmigaShell</title>
+<style>
+/* Topaz (TopazPlus a500/a1000/a2000 (Kickstart 1.x glyphs), GPLv2+ with font exception, rewtnull/amigafonts) embedded as base64 */
+@font-face{
+  font-family:'Topaz';
+  src:url(data:font/woff2;base64,d09GMgABAAAAABb8AAwAAAAAV4AAABapAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAWi2AAhhoRCAr2JNhbATYCJAOEBAuEBAAEIAWQYQeKQxveRQfGuHvY7YCUCjt5RAWrNaKK9Nro//9TcuM6rge47FiKLtKFRezh4m66ex3Spspzqfaizq+T90mkB5o6zy/FjwMrXOiVNVe4tob6bqzoETNBTPDs11QQHKsSd9hEszzvCI19kgv/8Mfee957v3MRBRKJ0ZY4oKRK0IGOpBps2DbtLPpExYgaFVVr7I1T9zoE2e3/JZJcQw2wGAPqXp2+of0AeJ/AXN4CQOPZUlwFJD9LDo1bzWpaLWkCtBhT+36HZG+kfNzGAIIA7HbJDzF6n1vWEAA5NOU3SO5AGgGQQ1Pcj+hBVj3q/521U3jPP+DuX4GGEz2tQ0tw4p2EA1WUdXsQdtKK47iA/89ln/enTYkNGu3aRi0CNgDkqEddfQF2fYCd9LgJaeeoQ5iZS9Q1TQCcjff8dDobzmBGA3lttB5KKKAyDjDQzwKEmAOG/P+mfUlVv//s6dmsTbY3ZDmw+QYoJWoGWrde6a30VNJMd/+o/nlyT26nIFX396nuDSGg3QHMNIQMF3CzENECYkBMuCk3Jz7ch9uWuepbc0Kc8ry5+7E3e27S2I/exf151hBEwiJBHMcBBNt7ibYfa5G25iLSGPcCus43ZKuSc3n4e8HFJal9QGNyjgzPkGRYKlLdWzkMWy+k/1JGIrHJHedYqUrGxPVMYX/8x4MUIAVJIVKYhZdwJDyJQCJCJIgMUSAqRIPoEANiQiyIDXEgLsSD+JAAEkIiSAxJICkkg+SQAlJCKkgNaSAtpIP0kAEyQibIDFkgK2SD7JADckIuyA15IC/kg/xQAAqiEAqjCIqiGIqjBEqiFEqjDMqiHMqjAiqiEiqjCqqiGqqjBmqiFmqjDuqiHuqjARqiERqjCZqiGZqjBVqiFVqjDdqiHdqjAzqiEzqjC7qiG7qjB3qiF3qjD8LQF/3QHwMwEIMwGEMwFMMwHCMwEqMwGmMwFuMwHhMwEZMwGVMwFdMwHTMwE7MwG3MwF/MwHwuwEIuwGEuwFMuwHCuwEquwGmuwFuuwHhuwEZuwGVuwFduwHTuwE7uwG3uwF/uwHwdwEIdwGEdwFMdwHCdwEqdwGmdwFudwHhdwEZdwGVdwFddwHTdwE7dwG3dwF/dwHw/wEI/wGE/wFM/wHC/wEq/wGm/wFu/wHh/wEZ/wGV/wFd/wHT/wE7/wG3/wF//wP7AElafALaDfxNVDMw1zeqMACnOqhxqr80h/nudYYqllllthpVVWW2OtddbbYKNNNttiq22222GnXXbbY6999jvgoEMOO+KoY4474aRTTjvjrHPOu+CiSy674qprrrvhpltuu+Oue+574KFHHnviqWeee+GlV15746132rTr0KlLtx7vffDRJ5998dU33/3w0y/XXycejy8QisQSqUyuUKrUGq21ja2dvYOjk7OLq5u7h6eXt4+vEKHChIsQKUq0f2LEihMvQaIkyVKkSpMuQ6Ys2XLkypOvQKEixUqUKlOuQqUq1WrUqlOvQaMmzVq06qW3Pvrqp78BBhok2BpiE/QESaCgiC3DjTLZYgCG/+UKLwgEle2RRpthWXDlenBTDfm9+P8KIKH0rf80HwlQ+6mAQAQmCrhEXkR7gKSoL9AQsG5wYLh2VZZlnIYF19FYK0utsqHjSLTB8Y0AlIlHmnU0C9/2Z1OLp7QeE1vuSbauVLW4FyyllkytW+7zZm1nTLXPvK8UpnKINxzJILxXE0K6Hgx3PS4YB1cDV8zYJiXedVxSHHG1ypWIh856QcePN6TiC+cO4ayLlY0uwQkyTUDNuSqUjrZUlOG8dR2Bd1gBTGQ1/vg+NKlN3Akkke6u06UrF+fYf2JCjC5OiL8CP2CDeZYuIZsS3RkfMA+l0nahXhwfAGvH0OMfjSFzxMNGFnEKxnR8+7Fi44CkV0lz69gaz9066Azrjn999d5Dwej2M3FqattCBcX/FBNOp7oj6LTb4nWXlVmwg9z8HxOvHrfsqZXtluZ6bBMIT7GkcgRYgDoAsrN93cRulAaVvlkbdtsYEWR+EnBRpFc4dS34r07Y7HcoCQGM6FrE9a4m4rq3X1Un1iKlXBijhGA6MOxGrDC+6gg7rkoDWr+ZIb7nYI4a/w4bgl/9rHvO6Z8+2flZcVApQ2dJN8plo+tze18AtalRp+Inw0RtsrhxobmeUBoTpGo4I4M06AlTG7NI3oYZJz5BUEty03fOXhh0zBSaywh+OlSeCkMqLckLc0MeJ4O6OquNR5XZ5cbdfnSt8LUK3x0zxctp47vFcbOCM1Mk4bY+z5ADi7Tue0mquZClAxu8FXUK3RKQbLRG6CEbrp6b/B17YDh5d14LzonNJRq8ZBdou3hRoHJ+qMBG73uWOx4FZ3Y1y61imaLjEz5FjJoTdH4cd6Ncw8lU0hx2USCBMlPrxkxpGS4S1HGngMCyb53k5EDSE1X5WBQrhcC/uyB5+aiGWaziEeLEgruTVDfaEMIEGu8a90r1qarQBSJ321GaKrEvoKLcUtLYyPi8Hjl9KYBik4kkSCmVa0XqqeZFzMvgu2sgwF9quKn1KbByXhPwlnkLXNeIuulryrlDC1GQ3MWKVB7uB/B9/UTB/9lHwd8lLdJh9eKVsDFpBmyeRRGR0lGou3vpQ6+NsRpORZlYQT9sALX3wDxG26xxaFyImhyRfzptagBPpd4/VTf4bh6DpZlWBDfN//gMUrPGmy11Ag7ruZemI5ig5j2KD9ZVAYP+9oACeCNMgsjZI5eJ6ieSFkIVlvRyWHKzp7cV146qfgIkvgaaI8UROhJtmRFei+YlLqHOFExX2eKWADEEYIjXTj+8iXmke68prCzh92GJNgYJnTpn85FkrFUW2Qc2GQ1kNcWPFSHJlNR5CXwLDnssqF4M6eZGPVyYKEwEbT+ooo4Ep3qbg53ZFP9Yj5TWBOLqMvcSZu6BPBPJcADuqfmCXPZD5Sx9HoG3EAB8FDronHqIfzGMBnWB/CIJTdx8GCANap9gOsnyCPcnzZ0KFVhoYUJAmc1uKJTkONanQ349DLC2HBL0FiK8zKWRK9lTPSfqgXxkj13kKWjyUqZMXndQ3Ng976KUqpVu7AROILZ5cEpM46DrhDcsuTw49UpuujnYJLWWhxxFGYVLUbmirm9tig29azam2aKth6quS89yfMl2UybcoOCiVaRalTo76C/HuB1Nc4ZOfA8klulYinmYofce7tCOQ4oNO8iIzeE3qQsnUsMVGOP0HGcSNL/yBeo7jX1Csy+FiDSiHkb2W0HM6VlxfZTVpCGYp8MYp/guo7SSTVtyxLMv5BTFFvCDgIrF1vmTgTAp3W3JxZ3G/3VSdyueNpDfDJLPE2mg+h6gjTAHGsUSmLlct29zazYziHyEWtSqV4zXTSbTulkXNrfg8VJ30yANDFK/dhQLUIjCdKutgLlOShqeLsHbe+88ejQYxexHA2mZkSUF5Kr68jP4rGFmwsObEm7Raj24Ncfayhg1N9nA6+dRhDIejYxrUhq0cvOhjvhn4OprWh2eviTMY9Eugv5FNf45Yr49i/fZ7GiOWhoRKJoRnmLXeihYCzuHGP8RkVj9io3waMwOQNfjIfEhKNFTitSUmNDfuuvWIre9ZqYVnDa500qrKtaKh6G6BxTPVyjRx8Tdido0uGNtEsQspInwm8bZVBh0Y6W6nY0Dm2r48H40LM7BxKfsFesGpEDJuc7oylE1iY4AMCYdGQYPJuWTptQGo+OjM0KCbkygIdFd8Bo4G6AhKJN5oHbXwfMZKglIAz5aOx0U82v7jGa77gNUOf/W4j5ePXITkf9BU8wNfx66OmMMJup953uyOEmnAd+g26sUGP9m3DHd9ugnUzdwssKKUd3prMQn6g1ZEjdcHF8bsN1ofILGRMTnbYYl3yA9Sc8JIFBrjz3/0G5Jzmp4A0vBrp8P6AOQrk5vQeAltCc3H7FM+7cioWLdM8/BsaepyT1ZgrDtVVitTZA7dPPhcO+rSzfWn+xa2O15+8TI0BKvv9JG++YnvvhogfSotVKKAV7aZD3zKXMPPjDearbCSrb80l0AN6lckLqnP/Q37KDW797ERnxWMK0ju56SXjSa1jfQk3hNojGW4ZBuSH5emIQVO3tvVJzOpdfOoynm5uKHiwlsetjDXH42uzvp1u8r9Opx/ZyFdAi5uPYZqaP0voWOT8RvyAKq+otHyjKWIXA1LUF4T20AhQ04lmRujoql80O1+T0gY5VjAFYu3eVSn8DDu16p2pluDZfWTvRQP5GumQiWvdg8vioa3cPauK41bQ84KFEG+zdNYBkYjebwIsleZgAwl1G02OQnZ9vKCyt5Et3T12NbaQaRiTyj03D5sfXL7k8k9peTxjoc6a+z8bq8NIuVmU09GuPF7eXeVOXT6tza0TmYHvG7sT3XNsXzodGa0e+xtdKD10NGP8/Ecy2tw4zmUGaNHfbUGzhR4/ZzT03PwdOBH3exBdSxMYKeafHH7ndyRFXWOwNOQzc+KFyLvrEabh0M7cPYodwJF4tWZnxLlkwovHrxszQmzps7LuWwXmz8hptrT8Imt2kMtRZF+3BmgZ2AF7nY4sl7QIg/ySN7S76dbydJ84L8uOqqet/Tvg66OtGNdaefBFVcvQo9rXR1wm3fQ0Jjx32yiqEGzyI+TN+TpdOiAXNzIN5MAewwuDXNs1IrXEXu4QVzqSQcJjX8ebKREN3RFLYI/iRZTJF+EzAeFri94UeLNIkrRB6qmAfP7n7h+1wlPngqZXVI6CaRyCsBZ3FasRlj9gAq1DB+q4Cl1oGxcFFrbwkgi2sP05YPQ6De3tdOtY4ZmUxjvbaf4XB1PSMPD1/6gRtbNtxhbwQL11wv7IoBwS/IsjH14hMPl1ulen3wUjmGMC5wvxukhCnIKKvJLowPRI029EaLqOX0LLyRKY6j2l0HZTpEUYMoWwTActEad1DBVzxGz7GN6abHykYekATGfuBL90Tw8bLIYVg51gVHeBQmu8xyuYKUjY23ENPoSd9PB2tLQEzVPD2qcl/gBp4nS/LazMc4lKjURhsfpTctukmuQDAt6bSrxXsIjsfkt0dS3vA9GF9oQht/cEko4vyUEkfzlf8Ys1C0CBLB82mbiqRnPtLqcJLG8bIFk88t1kmQkQOSPI2dgFkW2E0eAU1TJYi9EgdeldmHZXcjI5aGSIEEYGnWB5RlhZwqJRHetbZeBGaeotFr7sDHayHw2+B6YP/Gqwsyb9csxhv69jjxRzWO3NVWaDDZyYZxMuOYG+EqikPrdVYQgv1scWotVy3JX83RauMNOf9okPkxmqOTDLint7TxkijyqNNMuW6arj8Sv20goaZZRjBRN6qxGrKEVe0guo7VgyBaOuAOYUKVy+HpVFAwEB1Dd6IWs4JoEtlw1U80EVp6/XD3NsXoSofmcIcB85AhNjPAuVDVdGJvHsOYDEHAIsJJ95481I6RDXImZZFwmOU1+tO6QYVGOYcOdqCC+tACOEAysnhHR/58+p+w443t/wc4wDUQopdKWwr7ueRcZDwy3Uzaa5JFsLS1bUUHQ8BBFbtD/cRqdV6DUeFMYwIThSCVT9FYREevztQR/z2Hv/Jr0zii2mJ6/ouSj2b2VK7ZH3ZzjuKML5JpZklagYndBH2xdfoOVc4kp13L2L++8Dx15Aoq1C5kIWY4hJ6qJa96GI0EZdrZztwqsqg/IUB2APXi6NDMPwFsqpOyAIZe+dwSa8EUgaZWk6BqkvGPTUjgmdhgMIuCCOxpDU/aq9P/iF2ePCao5rmuTbLcIy93jqgNaDX6Fh8kUE+QcnCuwHkCuSHL/2ot/UVUJO/Gm5sxSfYB6VZc/SZfPySjPKIfR408uRO6nqlqWRQOdg/XDoKnbUNvJVIw4DT6N1qj9ckVXk7yYcDknxryyz5+ow3XezjL3mf52fJ1+OyP/v/xcPzKSb9K0njn/V2a9N+4/CTpYoA3bhO1wjEaZj3zzK2OeDA835DYC88AN3WdAQUSTAM/ujVjOk6oVH1a+2bNcwUjuSMZeJA183EUcgYifNH+vXgUhznZ3r12g6EQhdMdEmq+K0qXwBSe3nBJjXeGCHXL89FEVMGaKFeTnEZeq/uR4bMdWYM48l098oi4irxyeo98UvqM/Grx+oG6H8SNQgo0++F6FPFCIYrqMqWSpPCNLDog6dm06hE6bV1kRGs6svZt2XdJIo+i/Yi82p0n8ql3PZHfaJr3A3U/iBuFdLsLP1yPInHp7v68qKWyM/XbRYIHYFLAceumc+v+JNZ4ZBf/GGxWowLlSoiqUo2QVgXEPD6VLGWkyDaMUy3MKpU2FrSnDuKpbhU991a+KeDCnl08pitoyxUVo4dxyLN9HNfR4jTXUrrn8zZCA+AVl2qEP2obXu0iEQpZjj/ZJv9dBDLybfDlmVPf6Q4qZCv/gQTXfykoNh8qGyiSThCjJA6m4h6IQzxdiIPs0nVIK6BcoCxHEq3LFcjiEobnTJpepqpvxuOEN0x/8TUFGzR/UH49pBPuLR5ZEp3Adh1tSEigA8BIoAAM91KM4/OZCrjRckDjXzlUw0VsYCiVoZS9BAU2qJTECNzlP9Pncl0CoT1AtFQAYe58VYo0dwjC6mdFHAGKmA2Go8CAgl2h+7Zfw66VrFuhU7wOKY+6+/z/PvqoWGYFpTRe2CvQ9a/CMmMczFhs7a7b6cQd97U8/hr99/Aa12+qZrliQct2/iw25S4OKlHFurYK4WyUEECaFLcqiW4vlXIdKXNLtZItvsSkFFlnVKAQwtEGikrcwWdRt74wlJlwGlAyBMkQBVxWCkL2P5nT3C+K0nEOreEawcaX4WnFFIlbFUInkT3RFFn3hRNBYupapbIFQXFIrYV2JfEXeLAQ6IAMrl2J6y573DbYzs4jQVLtrUAHJMtEJbn+FyYyoRWWhFCS+8cz7dnXMXm2jpTXEpGSNc1SXsvWcQZaoUTFud+LdesT6zZcOYLb+BvkMABgj3gB8kthgcBgcXjw4sNP4Ge/f7BEiRFHREJGQUVDx8DEwsbBxVuDv9HGOGKuNmNNNckSG6wO389Do8zyyWdTzDPeKU99tNRGX33xzUpbXHDOVqXKTFfukgrnXWSSDttVusUmfcdtqnwwA5zS36Vap24T1KpRp0G9Rss1adF8v1F9wJsMO/RPB+BzhxhsvxWGcRZ/f0bo0uNgnDQhETEJKRk5BSUVNY26tLFmw5Ydew4cOXHmwpUbdx48efFWT/flEzTWRNOfi/5/cqmVBCKJTKHS6Awmi83hoH6ZO1+bD1+U57Qrdr1wnBtOdlf7ErncyKt8PxJpTGSG88ovSpycLN+IYQ6HGGYrBZI451HVLwM0t5pCrNlzRJetfZE7kY4yRXKZfnkSGe8AtE8zOKG4hyklT4oZI5aC6cuHW/HshM40KH+ZU4gRIyOxF/tQM++1I0nB6w39ZwOqypxfrZkqCXz7SWEzois1cPtYK82UB6d8HUYWUkW79dIJlo8TE5n828U2BdyvhdOVwWnHtF+SuKLqo+J9GhPN2Fojf3pOKOZ8h86iEukbQVgSuDNaUcXjS8Ok0X8vfWo0/kzSg8/aocJSWNFS6t/2dsaZ6+aKZnvUNAed6nXjcGqW2p3hj9fumblCw8yXmkZ+YFSHRrNsjBGUO7md9XjNLDZL9f6Cp3wVbJ2Y7dyHbzOYtc3SMG8Wcm2j1LLbo/y5g4JRHhiVOuj3RwPc/nl5u3bhPpV2He1EiiroKvvIC+lYVuFFRlC7D9sCYH0EAA==) format('woff2');
+  font-weight:normal;font-style:normal;
+}
+:root{
+  --wb-blue:#0055AA;
+  --wb-white:#FFFFFF;
+  --wb-black:#000022;
+  --wb-orange:#FF8800;
+  --px:2px; /* chrome pixel unit */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--wb-black);
+  font-family:'Topaz',monospace;
+  font-size:16px;line-height:16px;
+  color:var(--wb-white);
+  overflow:hidden;
+  -webkit-font-smoothing:none;
+  font-smooth:never;
+  text-rendering:optimizeSpeed;
+  cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" shape-rendering="crispEdges"><rect x="0" y="0" width="12" height="2" fill="%23000000"/><rect x="0" y="2" width="2" height="2" fill="%23000000"/><rect x="2" y="2" width="10" height="2" fill="%23AABBCC"/><rect x="12" y="2" width="2" height="2" fill="%23000000"/><rect x="0" y="4" width="2" height="2" fill="%23000000"/><rect x="2" y="4" width="8" height="2" fill="%23DD2222"/><rect x="10" y="4" width="2" height="2" fill="%23AABBCC"/><rect x="12" y="4" width="2" height="2" fill="%23000000"/><rect x="0" y="6" width="2" height="2" fill="%23000000"/><rect x="2" y="6" width="6" height="2" fill="%23DD2222"/><rect x="8" y="6" width="2" height="2" fill="%23AABBCC"/><rect x="10" y="6" width="2" height="2" fill="%23000000"/><rect x="0" y="8" width="2" height="2" fill="%23000000"/><rect x="2" y="8" width="8" height="2" fill="%23DD2222"/><rect x="10" y="8" width="2" height="2" fill="%23AABBCC"/><rect x="12" y="8" width="2" height="2" fill="%23000000"/><rect x="0" y="10" width="2" height="2" fill="%23000000"/><rect x="2" y="10" width="4" height="2" fill="%23DD2222"/><rect x="6" y="10" width="2" height="2" fill="%23000000"/><rect x="8" y="10" width="4" height="2" fill="%23DD2222"/><rect x="12" y="10" width="2" height="2" fill="%23AABBCC"/><rect x="14" y="10" width="2" height="2" fill="%23000000"/><rect x="2" y="12" width="4" height="2" fill="%23000000"/><rect x="8" y="12" width="2" height="2" fill="%23000000"/><rect x="10" y="12" width="4" height="2" fill="%23DD2222"/><rect x="14" y="12" width="2" height="2" fill="%23AABBCC"/><rect x="16" y="12" width="2" height="2" fill="%23000000"/><rect x="10" y="14" width="2" height="2" fill="%23000000"/><rect x="12" y="14" width="4" height="2" fill="%23DD2222"/><rect x="16" y="14" width="2" height="2" fill="%23AABBCC"/><rect x="18" y="14" width="2" height="2" fill="%23000000"/><rect x="12" y="16" width="2" height="2" fill="%23000000"/><rect x="14" y="16" width="4" height="2" fill="%23DD2222"/><rect x="18" y="16" width="2" height="2" fill="%23AABBCC"/><rect x="20" y="16" width="2" height="2" fill="%23000000"/><rect x="14" y="18" width="2" height="2" fill="%23000000"/><rect x="16" y="18" width="2" height="2" fill="%23DD2222"/><rect x="18" y="18" width="2" height="2" fill="%23000000"/><rect x="16" y="20" width="2" height="2" fill="%23000000"/></svg>') 0 0, default;
+}
+::selection{background:var(--wb-orange);color:var(--wb-black)}
+
+/* ---------- boot (power-on colour flips) ---------- */
+#boot{
+  position:fixed;inset:0;z-index:100;
+  background:var(--wb-black);
+}
+
+/* ---------- workbench screen ---------- */
+#screen{
+  position:fixed;inset:0;
+  background:var(--wb-blue);
+  display:flex;flex-direction:column;
+  visibility:hidden;
+}
+#screenbar{
+  flex:none;
+  background:var(--wb-white);color:var(--wb-blue);
+  height:22px;line-height:20px;
+  padding:0 0 0 8px;
+  display:flex;align-items:center;
+  border-bottom:var(--px) solid var(--wb-blue);
+  user-select:none;
+}
+#screenbar .title{flex:1;white-space:pre;overflow:hidden}
+.sgadget{flex:none;width:34px;height:22px;margin-left:0;border-left:var(--px) solid var(--wb-blue);position:relative;background:var(--wb-white)}
+.sgadget::before,.sgadget::after,.wgadget::before,.wgadget::after{
+  content:'';position:absolute;
+}
+/* left (to back): blue hollow square behind top-left, black filled square in front bottom-right */
+.sgadget.back::before,.wgadget.back::before{
+  left:6px;top:3px;width:18px;height:11px;
+  border:var(--px) solid var(--wb-blue);background:var(--wb-white);
+}
+.sgadget.back::after,.wgadget.back::after{
+  left:14px;top:8px;width:14px;height:11px;
+  background:var(--wb-black);
+}
+/* right (to front): black filled square behind top-left, blue hollow square in front bottom-right */
+.sgadget.front::before,.wgadget.front::before{
+  left:6px;top:3px;width:14px;height:11px;
+  background:var(--wb-black);
+}
+.sgadget.front::after,.wgadget.front::after{
+  left:12px;top:7px;width:18px;height:12px;
+  border:var(--px) solid var(--wb-blue);background:var(--wb-white);
+}
+
+/* ---------- shell window ---------- */
+#windowwrap{flex:1;padding:10px 12px 14px;display:flex;min-height:0}
+#window{
+  position:relative;
+  flex:1;display:flex;flex-direction:column;min-height:0;
+  border:var(--px) solid var(--wb-blue);
+  background:var(--wb-white);
+  padding:0 4px 4px;
+}
+#titlebar{
+  flex:none;height:22px;
+  margin:0 -4px;
+  background:
+    linear-gradient(var(--wb-blue),var(--wb-blue)) 0 5px/100% 4px no-repeat,
+    linear-gradient(var(--wb-blue),var(--wb-blue)) 0 13px/100% 4px no-repeat,
+    var(--wb-white);
+  color:var(--wb-blue);
+  display:flex;align-items:center;
+  user-select:none;
+}
+#titlebar .wtitle{flex:1;padding:0;white-space:nowrap;overflow:hidden}
+#titlebar .wtitle span{background:var(--wb-white);padding:0 8px 0 6px}
+#titlebar .wgadgets{display:flex;height:100%}
+.wgadget{
+  width:38px;height:100%;border-left:var(--px) solid var(--wb-blue);
+  position:relative;
+  background:var(--wb-white);
+}
+
+#console{
+  flex:1;min-height:0;
+  overflow-y:auto;
+  padding:4px 8px 26px;
+  word-break:break-word;
+  background:var(--wb-blue);
+}
+#console{scrollbar-width:none}
+#console::-webkit-scrollbar{display:none}
+#sizegadget{
+  position:absolute;right:2px;bottom:2px;width:28px;height:22px;
+  background:var(--wb-white);
+  border-left:var(--px) solid var(--wb-blue);
+  pointer-events:none;
+}
+#sizegadget::before{
+  content:'';position:absolute;right:4px;bottom:4px;width:16px;height:14px;
+  border:var(--px) solid var(--wb-blue);background:var(--wb-white);
+}
+#sizegadget::after{
+  content:'';position:absolute;right:14px;bottom:12px;width:10px;height:8px;
+  border:var(--px) solid var(--wb-blue);background:var(--wb-white);
+}
+#out{white-space:pre-wrap}
+#out .o{color:var(--wb-orange)}
+#out a{color:var(--wb-orange);text-decoration:none}
+#out a:hover,#out a:focus{background:var(--wb-orange);color:var(--wb-black);outline:none}
+#inline{white-space:pre-wrap}
+#cursor{
+  display:inline-block;width:8px;height:16px;
+  background:var(--wb-orange);vertical-align:bottom;
+}
+#screen.unfocused #cursor{background:transparent;box-shadow:inset 0 0 0 1px var(--wb-orange)}
+
+/* ---------- guru ---------- */
+#guru{
+  position:fixed;inset:0;z-index:200;
+  background:var(--wb-black);color:#FF0000;
+  display:none;
+  padding-top:14px;
+  text-align:center;
+  cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" shape-rendering="crispEdges"><rect x="0" y="0" width="12" height="2" fill="%23000000"/><rect x="0" y="2" width="2" height="2" fill="%23000000"/><rect x="2" y="2" width="10" height="2" fill="%23AABBCC"/><rect x="12" y="2" width="2" height="2" fill="%23000000"/><rect x="0" y="4" width="2" height="2" fill="%23000000"/><rect x="2" y="4" width="8" height="2" fill="%23DD2222"/><rect x="10" y="4" width="2" height="2" fill="%23AABBCC"/><rect x="12" y="4" width="2" height="2" fill="%23000000"/><rect x="0" y="6" width="2" height="2" fill="%23000000"/><rect x="2" y="6" width="6" height="2" fill="%23DD2222"/><rect x="8" y="6" width="2" height="2" fill="%23AABBCC"/><rect x="10" y="6" width="2" height="2" fill="%23000000"/><rect x="0" y="8" width="2" height="2" fill="%23000000"/><rect x="2" y="8" width="8" height="2" fill="%23DD2222"/><rect x="10" y="8" width="2" height="2" fill="%23AABBCC"/><rect x="12" y="8" width="2" height="2" fill="%23000000"/><rect x="0" y="10" width="2" height="2" fill="%23000000"/><rect x="2" y="10" width="4" height="2" fill="%23DD2222"/><rect x="6" y="10" width="2" height="2" fill="%23000000"/><rect x="8" y="10" width="4" height="2" fill="%23DD2222"/><rect x="12" y="10" width="2" height="2" fill="%23AABBCC"/><rect x="14" y="10" width="2" height="2" fill="%23000000"/><rect x="2" y="12" width="4" height="2" fill="%23000000"/><rect x="8" y="12" width="2" height="2" fill="%23000000"/><rect x="10" y="12" width="4" height="2" fill="%23DD2222"/><rect x="14" y="12" width="2" height="2" fill="%23AABBCC"/><rect x="16" y="12" width="2" height="2" fill="%23000000"/><rect x="10" y="14" width="2" height="2" fill="%23000000"/><rect x="12" y="14" width="4" height="2" fill="%23DD2222"/><rect x="16" y="14" width="2" height="2" fill="%23AABBCC"/><rect x="18" y="14" width="2" height="2" fill="%23000000"/><rect x="12" y="16" width="2" height="2" fill="%23000000"/><rect x="14" y="16" width="4" height="2" fill="%23DD2222"/><rect x="18" y="16" width="2" height="2" fill="%23AABBCC"/><rect x="20" y="16" width="2" height="2" fill="%23000000"/><rect x="14" y="18" width="2" height="2" fill="%23000000"/><rect x="16" y="18" width="2" height="2" fill="%23DD2222"/><rect x="18" y="18" width="2" height="2" fill="%23000000"/><rect x="16" y="20" width="2" height="2" fill="%23000000"/></svg>') 0 0, default;
+}
+#gurubox{
+  white-space:pre;
+  display:inline-block;
+  border:4px solid #FF0000;
+  padding:14px 28px;
+  min-width:min(92vw,760px);
+}
+#guru.off #gurubox{border-color:var(--wb-black)}
+#hidden-input{
+  position:fixed;left:-1000px;top:0;width:10px;height:10px;
+  opacity:0;border:0;padding:0;
+}
+@media (max-width:640px){
+  body{font-size:12px;line-height:12px}
+  #cursor{width:6px;height:12px}
+  #windowwrap{padding:6px}
+}
+</style>
+</head>
+<body>
+
+<div id="boot"></div>
+
+<div id="screen">
+  <div id="screenbar">
+    <div class="title" id="screenbartitle">Desktop release 1.3  837568 free memory</div>
+    <div class="sgadget back"></div>
+    <div class="sgadget front"></div>
+  </div>
+  <div id="windowwrap">
+    <div id="window">
+      <div id="titlebar">
+        <div class="wtitle"><span>The Shell</span></div>
+        <div class="wgadgets"><div class="wgadget back"></div><div class="wgadget front"></div></div>
+      </div>
+      <div id="sizegadget"></div>
+      <div id="console">
+        <div id="out"></div><span id="inline"></span><span id="cursor"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="guru">
+  <div id="gurubox">
+    <div>Software Failure.    Press left mouse button to continue.</div>
+    <div id="gurutext">Guru Meditation #00000004.00000000</div>
+  </div>
+</div>
+
+<input id="hidden-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="shell input">
+
+<script>
+/* ================= CONFIG SECTION ================= */
+const CFG = {
+  github  : "op4e71",          // 
+  name    : "Jacek Lach",
+  role    : "Software Developer",
+  location: "Gliwice, Poland",
+  email   : "exists",
+  www     : "https://op4e71.github.io",
+  about: [
+    "Hi, I'm Jacek -- CTO with computer science background",
+    "Not mentioning retro fan.",
+    "",
+    "I build software and hardware. Interested in hw/fw/sw/security",
+    "Currently CTO.",
+  ],
+  cv: [
+    "Experience",
+    "-----------------------------------------------------------",
+    "2023-       CTO                  Dimeq",
+    "            pushing things forward",
+    "2021-2023   R&D Manager          Dimeq",
+    "            developing new stuff",
+    "2018-2021   Developer            FP Instruments",
+    "            Firmware for industrial devices",
+    "2005-2020   Assistant Professor  Silesian University of Technology",
+    "            Cryptography, security",
+    "",
+    "Education",
+    "-----------------------------------------------------------",
+    "2001-2005   PhD Computer Networks    Silesian University of Technology",
+    "1996-2001   M.Sc. Computer Science    Silesian University of Technology",
+    "",
+    "Skills",
+    "-----------------------------------------------------------",
+    "Languages   <C, Python, shell, Java, C++, 68k asm>",
+    "Tools       <Linux, Docker, ...>",
+  ],
+};
+/* ================= END EDIT SECTION ================== */
+
+const out    = document.getElementById('out');
+const inline = document.getElementById('inline');
+const consEl = document.getElementById('console');
+const screen = document.getElementById('screen');
+const bootEl = document.getElementById('boot');
+const guruEl = document.getElementById('guru');
+const hidden = document.getElementById('hidden-input');
+
+let proc = 1;              // shell process number -> prompt "1> "
+let buf = '';              // current input
+let hist = [], histPos = -1;
+let lastStatus = 0;        // for WHY
+let lastCmd = '';
+let mode = 'boot';         // boot | shell | guru | closed
+let guruTimer = null;
+
+const PROMPT = () => proc + '> ';
+
+/* ---------- output helpers ---------- */
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function print(s=''){out.insertAdjacentHTML('beforeend', esc(s)+'\n'); scrollDown()}
+function printHTML(h){out.insertAdjacentHTML('beforeend', h+'\n'); scrollDown()}
+function scrollDown(){consEl.scrollTop = consEl.scrollHeight}
+function renderInline(){inline.textContent = PROMPT() + buf; scrollDown()}
+function amDate(d){
+  const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return String(d.getDate()).padStart(2,'0')+'-'+M[d.getMonth()]+'-'+String(d.getFullYear()%100).padStart(2,'0');
+}
+function amTime(d){
+  return [d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join(':');
+}
+
+/* ---------- boot sequence: power-on colour flips ---------- */
+function boot(cold){
+  mode = 'boot';
+  guruEl.style.display = 'none';
+  screen.style.visibility = 'hidden';
+  bootEl.style.display = 'block';
+  const seq = [
+    ['#000000', 500],   // black
+    ['#444444', 450],   // dark grey
+    ['#888888', 450],   // grey
+    ['#AAAAAA', 350],   // light grey
+    ['#FFFFFF', 300],   // white
+  ];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches){
+    bootEl.style.display='none'; openShell(cold); return;
+  }
+  let i = 0;
+  (function step(){
+    if (i < seq.length){
+      bootEl.style.background = seq[i][0];
+      setTimeout(step, seq[i][1]); i++;
+    } else {
+      bootEl.style.display = 'none';
+      openShell(cold);
+    }
+  })();
+}
+
+function openShell(cold){
+  mode = 'shell';
+  screen.style.visibility = 'visible';
+  if (cold){
+    out.innerHTML = '';
+    proc = 1;
+    print('New Shell process 1');
+    print(PROMPT()+'; ' + CFG.name + ' -- portfolio shell');
+    print(PROMPT()+'; type HELP for a list of commands');
+  }
+  buf = ''; renderInline();
+  focusInput();
+}
+
+/* ---------- guru ---------- */
+function guru(){
+  mode = 'guru';
+  const n = (Date.now() >>> 0).toString(16).toUpperCase().padStart(8,'0');
+  document.getElementById('gurutext').textContent = 'Guru Meditation #00000004.' + n;
+  screen.style.visibility = 'hidden';
+  guruEl.style.display = 'block';
+  guruTimer = setInterval(()=>guruEl.classList.toggle('off'), 1000);
+}
+function leaveGuru(){
+  clearInterval(guruTimer);
+  guruEl.classList.remove('off');
+  boot(true);            // a real guru rebooted the machine
+}
+guruEl.addEventListener('mousedown', e=>{ if(e.button===0) leaveGuru(); });
+guruEl.addEventListener('touchstart', leaveGuru);
+
+/* ---------- commands ---------- */
+const COMMANDS = {
+  help(){
+    print('Available commands:');
+    print('');
+    print('  ABOUT      who I am');
+    print('  CV         experience, education, skills');
+    print('  PROJECTS   my GitHub repositories');
+    print('  ACTIVITY   recent GitHub activity');
+    print('  CONTACT    how to reach me');
+    print('  LIST       list objects in current directory');
+    print('  DIR        as above, briefly');
+    print('  TYPE       type a file to the console');
+    print('  DATE       current date and time');
+    print('  AVAIL      memory available');
+    print('  VERSION    Kickstart/Workbench version');
+    print('  ECHO       echo a string');
+    print('  WHY        explain why the last command failed');
+    print('  CLEAR      clear the screen');
+    print('  ENDSHELL   end this shell');
+    print('  GURU       do not run this command');
+  },
+  about(){ CFG.about.forEach(print); },
+  cv(){ CFG.cv.forEach(print); },
+  contact(){
+    printHTML('Email    <a href="mailto:'+esc(CFG.email)+'">'+esc(CFG.email)+'</a>');
+    printHTML('GitHub   <a href="https://github.com/'+esc(CFG.github)+'" target="_blank" rel="noopener">github.com/'+esc(CFG.github)+'</a>');
+    printHTML('WWW      <a href="'+esc(CFG.www)+'" target="_blank" rel="noopener">'+esc(CFG.www)+'</a>');
+    print('Location ' + CFG.location);
+  },
+  async projects(){
+    print('Contents of DH0:projects');
+    try{
+      const r = await fetch('https://api.github.com/users/'+CFG.github+'/repos?sort=pushed&per_page=10');
+      if(!r.ok) throw 0;
+      const repos = await r.json();
+      if(!repos.length){ print('Directory is empty'); return; }
+      repos.forEach(p=>{
+        const d = new Date(p.pushed_at);
+        printHTML(
+          '<a href="'+esc(p.html_url)+'" target="_blank" rel="noopener">'+esc(p.name.padEnd(24))+'</a>' +
+          esc(String(p.stargazers_count).padStart(4)+'* ') +
+          esc('----rwed '+amDate(d)+' '+amTime(d))
+        );
+        if(p.description) printHTML('  <span class="o">'+esc(p.description)+'</span>');
+      });
+      print(repos.length+' files - '+repos.reduce((a,p)=>a+p.stargazers_count,0)+' stars used');
+    }catch(e){
+      print('projects: error while reading github.com'); lastStatus = 20;
+    }
+  },
+  async activity(){
+    try{
+      const r = await fetch('https://api.github.com/users/'+CFG.github+'/events/public?per_page=30');
+      if(!r.ok) throw 0;
+      const ev = await r.json();
+      if(!ev.length){ print('No recent activity'); return; }
+      ev.slice(0,12).forEach(e=>{
+        const d = amDate(new Date(e.created_at));
+        const repo = e.repo ? e.repo.name : '';
+        let what = '';
+        switch(e.type){
+          case 'PushEvent':          what='Push    '+(e.payload.commits?e.payload.commits.length:1)+' commit(s) to '+repo; break;
+          case 'CreateEvent':        what='Create  '+e.payload.ref_type+' in '+repo; break;
+          case 'DeleteEvent':        what='Delete  '+e.payload.ref_type+' in '+repo; break;
+          case 'WatchEvent':         what='Star    '+repo; break;
+          case 'ForkEvent':          what='Fork    '+repo; break;
+          case 'IssuesEvent':        what='Issue   '+e.payload.action+' in '+repo; break;
+          case 'IssueCommentEvent':  what='Comment issue in '+repo; break;
+          case 'PullRequestEvent':   what='PR      '+e.payload.action+' in '+repo; break;
+          case 'ReleaseEvent':       what='Release '+repo; break;
+          case 'PublicEvent':        what='Public  '+repo; break;
+          default:                   what=e.type.replace('Event','')+' '+repo;
+        }
+        print(d+'  '+what);
+      });
+    }catch(e){
+      print('activity: error while reading github.com'); lastStatus = 20;
+    }
+  },
+  list(){
+    const d = amDate(new Date()), t = amTime(new Date());
+    print('Directory "dh0:" on '+amDate(new Date()));
+    print('c                            Dir ----rwed '+d+' '+t);
+    print('s                            Dir ----rwed '+d+' '+t);
+    ['about','cv','projects','activity','contact'].forEach(f=>
+      print(f.padEnd(24)+String(f.length*128).padStart(7)+' ----rwed '+d+' '+t));
+    print('5 files - 2 directories - 12 blocks used');
+  },
+  dir(){
+    print('  c (dir)');
+    print('  s (dir)');
+    print('  about        activity     contact');
+    print('  cv           projects');
+  },
+  type(a){
+    const f = (a[0]||'').toLowerCase();
+    if(!a.length){ print('No file to type'); lastStatus=20; return; }
+    if(f==='s/startup-sequence'||f==='startup-sequence'){
+      print('c:SetPatch >NIL:');
+      print('Addbuffers df0: 10');
+      print('FailAt 21');
+      print('resident CLI L:Shell-Seg SYSTEM pure add');
+      print('echo "'+CFG.name+' -- portfolio 1.3"');
+      print('LoadWB');
+      print('endcli >NIL:');
+    } else {
+      print('Can\'t open '+a[0]); lastStatus = 20;
+    }
+  },
+  date(){ const d=new Date();
+    const D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    print(D[d.getDay()]+' '+amDate(d)+' '+amTime(d));
+  },
+  avail(){
+    print('Type  Available    In-Use   Maximum   Largest');
+    print('chip     373064    151224    524288    370848');
+    print('fast     464504     59784    524288    464504');
+    print('total    837568    211008   1048576    464504');
+  },
+  version(){ print('Kickstart version 34.5. Workbench version 34.20'); },
+  echo(a, raw){ print(raw.replace(/^"(.*)"$/,'$1')); },
+  clear(){ out.innerHTML=''; },
+  cls(){ out.innerHTML=''; },
+  why(){
+    if(lastStatus===0) print('The last command did not set a return value');
+    else if(lastStatus===10) print('The last command failed because object is not of required type');
+    else print('The last command failed because error while reading');
+  },
+  guru(){ setTimeout(guru, 400); },
+  endshell(){ endShell(); },
+  endcli(){ endShell(); },
+};
+
+function endShell(){
+  mode = 'closed';
+  screen.style.visibility = 'hidden';
+  setTimeout(()=>{
+    proc++;
+    screen.style.visibility = 'visible';
+    print('');
+    print('New Shell process '+proc);
+    mode = 'shell';
+    buf=''; renderInline(); focusInput();
+  }, 1200);
+}
+
+/* ---------- input handling ---------- */
+async function run(line){
+  inline.textContent='';
+  print(PROMPT()+line);
+  const trimmed = line.trim();
+  buf = '';
+  if(!trimmed){ renderInline(); return; }
+  hist.push(line); histPos = hist.length;
+  const parts = trimmed.split(/\s+/);
+  const cmd = parts[0].toLowerCase();
+  const args = parts.slice(1);
+  const raw  = trimmed.slice(parts[0].length).trim();
+  lastStatus = 0; lastCmd = cmd;
+  if(COMMANDS[cmd]){
+    await COMMANDS[cmd](args, raw);
+  } else {
+    print(parts[0]+': Unknown command');
+    lastStatus = 10;
+  }
+  if(mode==='shell') renderInline();
+}
+
+function keyHandler(e){
+  if(mode==='guru'){ leaveGuru(); return; }
+  if(mode!=='shell') return;
+  if(e.ctrlKey || e.metaKey || e.altKey) return;
+  if(e.key==='Enter'){ e.preventDefault(); run(buf); }
+  else if(e.key==='Backspace'){ e.preventDefault(); buf=buf.slice(0,-1); renderInline(); }
+  else if(e.key==='ArrowUp'){ e.preventDefault();
+    if(hist.length && histPos>0){ histPos--; buf=hist[histPos]; renderInline(); } }
+  else if(e.key==='ArrowDown'){ e.preventDefault();
+    if(histPos < hist.length-1){ histPos++; buf=hist[histPos]; }
+    else { histPos = hist.length; buf=''; }
+    renderInline(); }
+  else if(e.key==='Tab'){ e.preventDefault();
+    const p = buf.toLowerCase();
+    if(p){ const m = Object.keys(COMMANDS).filter(c=>c.startsWith(p));
+      if(m.length===1) { buf = m[0]+' '; renderInline(); }
+      else if(m.length>1){ inline.textContent=''; print(PROMPT()+buf); print(m.join('  ')); renderInline(); } } }
+  else if(e.key.length===1){ e.preventDefault(); buf+=e.key; renderInline(); }
+}
+window.addEventListener('keydown', keyHandler);
+
+/* mobile: route soft-keyboard input through hidden field */
+hidden.addEventListener('input', ()=>{
+  if(mode!=='shell'){ hidden.value=''; return; }
+  buf += hidden.value; hidden.value=''; renderInline();
+});
+function focusInput(){ hidden.focus({preventScroll:true}); }
+document.addEventListener('mousedown', ()=>{ if(mode==='shell') setTimeout(focusInput,0); });
+document.addEventListener('touchend', ()=>{ if(mode==='shell') focusInput(); });
+window.addEventListener('blur', ()=>screen.classList.add('unfocused'));
+window.addEventListener('focus', ()=>screen.classList.remove('unfocused'));
+
+document.fonts.ready.then(()=>boot(true));
+</script>
+</body>
+</html>
